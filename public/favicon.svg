@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#bookGradient)"/>
+  
+  <!-- Book -->
+  <g transform="translate(25, 20)">
+    <!-- Left page -->
+    <rect x="0" y="0" width="22" height="60" rx="2" fill="#ffffff" opacity="0.95"/>
+    <line x1="4" y1="12" x2="18" y2="12" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
+    <line x1="4" y1="20" x2="18" y2="20" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
+    <line x1="4" y1="28" x2="18" y2="28" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
+    <line x1="4" y1="36" x2="18" y2="36" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Right page -->
+    <rect x="22" y="0" width="22" height="60" rx="2" fill="#ffffff" opacity="0.95"/>
+    <line x1="26" y1="12" x2="40" y2="12" stroke="#6366f1" stroke-width="1.5" opacity="0.6"/>
+    <line x1="26" y1="20" x2="40" y2="20" stroke="#6366f1" stroke-width="1.5" opacity="0.6"/>
+    <line x1="26" y1="28" x2="40" y2="28" stroke="#6366f1" stroke-width="1.5" opacity="0.6"/>
+    <line x1="26" y1="36" x2="40" y2="36" stroke="#6366f1" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Book spine -->
+    <rect x="20" y="0" width="4" height="60" fill="#1e40af" opacity="0.8"/>
+  </g>
+</svg>

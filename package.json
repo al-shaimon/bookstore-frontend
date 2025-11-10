@@ -1,8 +1,9 @@
 {
-  "name": "frontend",
+  "name": "book-store-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A modern book store application to manage your book collection",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
