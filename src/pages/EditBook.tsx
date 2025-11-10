@@ -53,7 +53,7 @@ const EditBook = () => {
       .then(() => {
         setLoading(false);
         toast.success('Book updated successfully');
-        navigate('/');
+        navigate('/', { state: { refresh: true } });
       })
       .catch((error) => {
         setLoading(false);

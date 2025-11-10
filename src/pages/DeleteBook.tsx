@@ -22,7 +22,7 @@ const DeleteBook = () => {
       .then(() => {
         setLoading(false);
         toast.success('Book deleted successfully');
-        navigate('/');
+        navigate('/', { state: { refresh: true } });
       })
       .catch((error) => {
         setLoading(false);

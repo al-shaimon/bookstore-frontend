@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Plus, Table2, LayoutGrid, BookOpen, Search } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'sonner';
@@ -27,8 +27,9 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(12);
   const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
 
-  useEffect(() => {
+  const fetchBooks = () => {
     setLoading(true);
     axios
       .get(`${API_URL}/books`)
@@ -41,7 +42,18 @@ const Home = () => {
         toast.error('Failed to fetch books');
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchBooks();
   }, []);
+
+  // Refetch books when returning from delete/edit with state
+  useEffect(() => {
+    if (location.state?.refresh) {
+      fetchBooks();
+    }
+  }, [location.state]);
 
   // Filter books based on search query
   const filteredBooks = useMemo(() => {

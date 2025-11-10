@@ -35,7 +35,7 @@ const CreateBook = () => {
       .then(() => {
         setLoading(false);
         toast.success('Book created successfully');
-        navigate('/');
+        navigate('/', { state: { refresh: true } });
       })
       .catch((error) => {
         setLoading(false);
